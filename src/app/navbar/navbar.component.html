@@ -1,0 +1,13 @@
+
+<div class="flex items-center justify-between px-5 py-3 my-3">
+    <span class="text-xl font-bold border-b-4 md:text-2xl border-green">
+      {{ active }}
+    </span>
+  
+    <div class="text-base font-normal md:text-xl">
+      <a *ngIf="active !== 'About'" [routerLink]="['/']" class="mx-2 cursor-pointer hover:border-b-4 hover:text-green" (click)="setActive('About')">About</a>
+      <a *ngIf="active !== 'Resume'" [routerLink]="['/resume']" class="mx-2 cursor-pointer hover:border-b-4 hover:text-green" (click)="setActive('Resume')">Resume</a>
+      <a *ngIf="active !== 'Projects'" [routerLink]="['/projects']" class="mx-2 cursor-pointer hover:border-b-4 hover:text-green" (click)="setActive('Projects')">Projects</a>
+    </div>
+  </div>
+  

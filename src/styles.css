@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   font-family: sans-serif;
+   color: #354358;
+}
+.dark .dark\:bg-gray-800 {
+    background-color: #2d3748;
+  }
+  
+  /* Ajoutez d'autres styles spécifiques au thème sombre ici */
+  
+/* //TODO put this in document */
+/* body {
+   background-color: black;
+} */
