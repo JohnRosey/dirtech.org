@@ -1,0 +1,12 @@
+.dark-theme {
+    background-color: #000;
+    color: #fff;
+  }
+body {
+    font-family: sans-serif;
+    color: #354358;
+ }
+.dark .dark\:bg-gray-800 {
+     background-color: #2d3748;
+   }
+   

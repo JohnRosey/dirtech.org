@@ -8,12 +8,15 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
   theme: string = 'light';
+  themeService: any;
 
+  //changeTheme() {
+   // this.theme = this.theme === 'light' ? 'dark' : 'light';
+  //}
   changeTheme() {
-    this.theme = this.theme === 'light' ? 'dark' : 'light';
+    this.themeService.toggleTheme();
   }
-
   emailMe() {
-    window.open("mailto:code.sumax@gmail.com");
+    window.open("mailto:ismael.gansonre@icloud.com");
   }
 }
