@@ -1,4 +1,8 @@
-<div class="grid grid-cols-12 gap-6 px-5 my-14 lg:mb-0 md:mb-16 sm:px-20 md:px-32 lg:px-36 xl:px-48">
+<div class="min-h-screen min-w-full bg-slate-200 dark:bg-dark-100">
+  <div
+    class=" items-center  dark:text-white  p-5 font-semibold text-lg shadow-lg"
+  >
+<div class="grid grid-cols-12 gap-6 px-5 my-14 lg:mb-0 md:mb-16 sm:px-20 md:px-32 lg:px-36 xl:px-48 ">
   <div class="h-full col-span-12 p-4 text-base text-center bg-white dark:bg-dark-500 lg:col-span-3 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
     <app-sidebar></app-sidebar>
   </div>
@@ -6,4 +10,13 @@
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>
   </div>
+  <button
+    class="flex transition-transform hover:scale-125 align-middle"
+    (click)="darkMode.set(!darkMode())"
+  >
+    <span *ngIf="!darkMode()" class="material-icons">dark_mode</span>
+    <span *ngIf="darkMode()" class="material-icons">light_mode</span>
+  </button>
+</div>
+</div>
 </div>

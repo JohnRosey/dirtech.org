@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ResumeComponent } from './resume/resume.component';
+import { DarkModeComponent } from './dark-mode/dark-mode.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ResumeComponent } from './resume/resume.component';
     NavbarComponent,
     AboutComponent,
     ProjectsComponent,
-    ResumeComponent
+    ResumeComponent,
+    DarkModeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ThemeService } from './theme.service';
+import {Component, effect, HostBinding, Renderer2, signal} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,21 @@ import { ThemeService } from './theme.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private themeService: ThemeService) {}
+  darkMode = signal<boolean>(
+    JSON.parse(window.localStorage.getItem('darkMode') ?? 'false')
+  );
 
-  toggleTheme() {
-    this.themeService.toggleTheme();
+  @HostBinding('class.dark') get mode() {
+    return this.darkMode();
+  }
+  @HostBinding('class.dark') get mode2() {
+    return this.darkMode();
+  }
+
+  constructor(private renderer: Renderer2) {
+    effect(() => {
+      window.localStorage.setItem('darkMode', JSON.stringify(this.darkMode()));
+    });
+
   }
 }
