@@ -1,12 +1,15 @@
+
 <div class="min-h-screen min-w-full bg-slate-200 dark:bg-dark-100">
+  <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
   <div
-    class=" items-center  dark:text-white  p-5 font-semibold text-lg shadow-lg"
-  >
+    class=" items-center  dark:text-white  p-5 font-semibold text-lg shadow-lg">
+    <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity animate-blob animation-delay dark:"></div>
 <div class="grid grid-cols-12 gap-6 px-5 my-14 lg:mb-0 md:mb-16 sm:px-20 md:px-32 lg:px-36 xl:px-48 ">
-  <div class="h-full col-span-12 p-4 text-base text-center bg-white dark:bg-dark-500 lg:col-span-3 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
+  <div class="absolute top-2/4 -right-10 w-60 h-60 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay"></div>
+  <div class="h-full col-span-12 p-4 text-base text-center bg-white dark:bg-dark-500 lg:col-span-3 rounded-2xl  backdrop-blur-sm bg-white/30 ">
     <app-sidebar></app-sidebar>
   </div>
-  <div class="flex flex-col col-span-12 overflow-hidden bg-white shadow-custom-light dark:shadow-custom-dark lg:col-span-9 rounded-2xl dark:bg-dark-500">
+  <div class="flex flex-col col-span-12  bg-white  dark:bg-dark-500 lg:col-span-9 rounded-2xl  backdrop-blur-sm bg-white/30">
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>
   </div>

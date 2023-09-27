@@ -1,9 +1,30 @@
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
-  ], 
+  ],
   darkMode: "class",
   theme: {
+    extend: {
+      animation: {
+        blob: "blob 7s infinite",
+      },
+      keyframes: {
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.1)",
+          },
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.9)",
+          },
+          "100%": {
+            transform: "tranlate(0px, 0px) scale(1)",
+          },
+        },
+      },
+    },
     fontFamily: {
       sans: ["ui-sans-serif", "system-ui"],
       kaushan: ["Kaushan Script"],
@@ -12,7 +33,22 @@ module.exports = {
       "custom-light": " 0 0 10px #313131",
       "custom-dark": "5px 5px 10px #0a0c0e , -5px -5px 10px #14161c",
     },
-
+    keyframes: {
+      blob: {
+        "0%": {
+          transform: "translate(0px, 0px) scale(1)",
+        },
+        "33%": {
+          transform: "translate(30px, -50px) scale(1.1)",
+        },
+        "66%": {
+          transform: "translate(-20px, 20px) scale(0.9)",
+        },
+        "100%": {
+          transform: "tranlate(0px, 0px) scale(1)",
+        },
+      },
+    },
     extend: {
       colors: {
         green: {
