@@ -1,0 +1,15 @@
+<!-- bar.component.html -->
+<div class="my-2 text-white bg-gray-300 rounded-full dark:bg-dark-300 dark:bg-black-500">
+  <div
+    class="flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-green to-blue-500"
+    [style.width]="barWidth">
+    <!-- Here you can use the Angular Material icon component or a similar one -->
+    <i class="material-icons mr-3">{{ value.icon }}</i>
+    {{ value.name }}
+  </div>
+</div>
+<div class="my-2 text-white bg-gray-300 rounded-full dark:bg-dark-300 dark:bg-black-500">
+  <div class="flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-green to-blue-500" [style.width.%]="value.level">
+    <i class="mr-3">{{value.icon}}</i> {{value.name}}
+  </div>
+</div>

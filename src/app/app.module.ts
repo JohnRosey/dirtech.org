@@ -7,9 +7,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ResumeComponent } from './resume/resume.component';
 import { DarkModeComponent } from './dark-mode/dark-mode.component';
 import { ProjectsNavbarComponent } from './projects-navbar/projects-navbar.component';
+import { BarComponent } from './bar/bar.component';
+import {ResumeComponent} from "./resume/resume.component";
 
 @NgModule({
   declarations: [
@@ -17,10 +18,11 @@ import { ProjectsNavbarComponent } from './projects-navbar/projects-navbar.compo
     SidebarComponent,
     NavbarComponent,
     AboutComponent,
-    ProjectsComponent,
     ResumeComponent,
+    ProjectsComponent,
     DarkModeComponent,
     ProjectsNavbarComponent,
+    BarComponent,
   ],
   imports: [
     BrowserModule,

@@ -68,6 +68,9 @@ export class DataService {
       return this.projects.filter((project) => project.category.includes(category));
     }
   }
+
+
+
   constructor( ) {
 
   }
