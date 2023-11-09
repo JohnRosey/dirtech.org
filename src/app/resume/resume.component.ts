@@ -1,5 +1,5 @@
-import {DataService} from "../data";
 import { Component } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-resume',
@@ -9,8 +9,21 @@ import { Component } from '@angular/core';
 
 
 export class ResumeComponent {
-  languages = this.dataService.languages;
-  tools = this.dataService.services;
+  currentSlide = 0;
+  categories = [
+    // ... vos catégories ici
+  ];
+  
+  languages = this.dataService.getSkills();
+  tools = this.dataService.getServices();
+  projects = this.dataService.getProjects();
+  previousCategory() {
+    // Logique pour afficher la catégorie précédente
+  }
+
+  nextCategory() {
+    // Logique pour afficher la catégorie suivante
+  }
   constructor(private dataService: DataService) {}
 
 

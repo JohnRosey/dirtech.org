@@ -4,16 +4,36 @@
   <div class="grid gap-6 md:grid-cols-2">
     <!-- ... Education & Experience section ... -->
   </div>
+  <div class="flex flex-col flex-grow px-6 pt-1 items-center">
+    <h4 class="my-3 text-xl font-semibold tracking-wide text-center">Languages & Frameworks</h4>
+  
+    <!--Languages & Tools -->
+    <div class="category-wrapper w-full"> <!-- Ensure this is full width if you want to center the grid as well -->
+      <div class="grid gap-2 grid-cols-4 place-items-center">
+        <!-- ... Section Langages ... -->
+        <div *ngFor="let language of languages">
+          <div class="icon-wrapper" title="Level: {{ language.level }}">
+            <img src="{{ language.iconUrl }}" alt="{{ language.name }} Icon" />
+          </div>
+          <div class="language-name text-center">{{ language.name }}</div> <!-- Nom du framework -->
+        </div>
+      </div>
+    </div>
+    <h4 class="my-3 text-xl font-semibold tracking-wide text-center">Tools</h4>
 
-  <!--Languages & Tools -->
-  <div class="grid gap-9 md:grid-cols-2">
-    <!-- ... Languages section ... -->
-    <div *ngFor="let language of languages">
-      <app-bar [value]="language"></app-bar>
-    </div>
-    <!-- ... Tools section ... -->
-    <div *ngFor="let tool of tools">
-      <app-bar [value]="tool"></app-bar>
-    </div>
+    <!--tools-->
+    <div class="category-wrapper w-full">
+      
+      <div class="grid gap-2 grid-cols-4 place-items-center">
+        <!-- ... Section Frameworks ... -->
+        <div *ngFor="let tool of tools">
+          <div class="icon-wrapper" title="Level: {{ tool.title }}">
+            <img src="{{ tool.iconUrl }}" alt="{{ tool.about }} Icon" />
+          </div>
+          <div class="language-name text-center">{{ tool.about }}</div> <!-- Nom du framework -->
+        </div>
+      </div>
+      
+      
   </div>
-</div>
+  </div>

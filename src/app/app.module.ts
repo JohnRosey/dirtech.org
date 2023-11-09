@@ -11,6 +11,7 @@ import { DarkModeComponent } from './dark-mode/dark-mode.component';
 import { ProjectsNavbarComponent } from './projects-navbar/projects-navbar.component';
 import { BarComponent } from './bar/bar.component';
 import {ResumeComponent} from "./resume/resume.component";
+import { ServiceCardComponent } from './service-card/service-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {ResumeComponent} from "./resume/resume.component";
     DarkModeComponent,
     ProjectsNavbarComponent,
     BarComponent,
+    ServiceCardComponent,
   ],
   imports: [
     BrowserModule,
