@@ -116,20 +116,20 @@ export class DataService {
 
    private projects: Project[] = [
     {
-      name: 'COVID Tracker',
-      description: 'This app shows a statistical view about corona virus over the world',
+      name: 'MarketPlace',
+      description: 'This app is a marketplace where you can buy and sell products for Burkina Faso people with cash on delivery',
       image_path: '/images/covid.jpg',
       deployed_url: 'https://covid-19-tracker-by-sumit.web.app/',
       github_url: 'https://github.com/Dey-Sumit/covid-19-tracker',
-      category: ['react'],
-      key_techs: ['React', 'Chart.js', 'Material UI'],
+      category: ['flutter'],
+      key_techs: ['Dart', 'Android', 'IOS'],
     },
     {
       name: 'Dev Talks',
       image_path: '/images/dev.jpg',
       deployed_url: 'https://dev-talks.herokuapp.com/',
       github_url: '',
-      category: ['node', 'mongo', 'react'],
+      category: ['Java', 'nodejs', 'Typescript'],
       description: 'Social Media app for developers who can share project,create posts,etc...',
       key_techs: ['React', 'Redux', 'Node.js', 'Express.js', 'MongoDB'],
     },
@@ -138,10 +138,19 @@ export class DataService {
       image_path: '/images/chatapp.jpg',
       deployed_url: 'https://sumit-chat.netlify.app/',
       github_url: '',
-      category: ['node', 'react'],
+      category: ['Java'],
       description:  'Basic Realtime Chat App with rooms',
-      key_techs: ['React', 'Node.js', 'Express.js', 'Socket.io'],
-        }
+      key_techs: ['Java', 'RMI','Socket.io'],
+        },
+    {
+      name: 'Coiffex',
+      image_path: '/images/covid.jpg',
+      deployed_url: 'https://covid-19-tracker-by-sumit.web.app/',
+      github_url: '',
+      category: ['Java','Angular','SpringBoot','PostgreSQL'],
+      description: 'This app is use for peopke who want to book an appointment with a hairdresser',
+      key_techs: ['Java','Angular','SpringBoot','PostgreSQL'],
+    },
 
   ];
   getProjectsByCategory(category: string) {
