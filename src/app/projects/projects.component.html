@@ -2,9 +2,9 @@
 
 <div class="flex px-3 py-2 space-x-3 overflow-x-auto list-none">
 
-  <li class="capitalize cursor-pointer hover:text-green" (click)="handleFilterCategory('All')" [ngClass]="{'text-green': activeCategory === ''}">all</li>
-  <li class="capitalize cursor-pointer hover:text-green" (click)="handleFilterCategory('react')" [ngClass]="{'text-green': activeCategory === 'Java'}">Java</li>
-  <li class="capitalize cursor-pointer hover:text-green" (click)="handleFilterCategory('mongo')" [ngClass]="{'text-green': activeCategory === 'Flutter'}">Flutter</li>
+  <li class="capitalize cursor-pointer hover:text-green" (click)="handleFilterCategory('')" [ngClass]="{'text-green': activeCategory === ''}">all</li>
+  <li class="capitalize cursor-pointer hover:text-green" (click)="handleFilterCategory('Java')" [ngClass]="{'text-green': activeCategory === 'Java'}">Java</li>
+  <li class="capitalize cursor-pointer hover:text-green" (click)="handleFilterCategory('Flutter')" [ngClass]="{'text-green': activeCategory === 'Flutter'}">Flutter</li>
   <li class="capitalize cursor-pointer hover:text-green" (click)="handleFilterCategory('django')" [ngClass]="{'text-green': activeCategory === 'django'}">django</li>
   <li class="capitalize cursor-pointer hover:text-green" (click)="handleFilterCategory('node')" [ngClass]="{'text-green': activeCategory === 'node'}">node</li>
 </div>
@@ -12,7 +12,7 @@
 <div class="flex px-3 py-2 space-x-3 overflow-x-auto list-none">
   <!-- Filtrer et afficher les projets de la catégorie sélectionnée -->
   <div *ngFor="let project of projects">
-    <ng-container *ngIf="activeCategory === 'All' || project.category.includes(activeCategory)">
+    <ng-container *ngIf="activeCategory === '' || project.category.includes(activeCategory)">
       <!-- Afficher les détails du projet -->
       <h2>{{ project.name }}</h2>
       <p>{{ project.description }}</p>

@@ -1,39 +1,68 @@
-/* Dans votre fichier de style CSS ou SCSS */
+/* Styles existants */
 .icon-wrapper {
-    display: inline-block;
-    position: relative; /* Position relative pour positionner la barre de progression par rapport à l'icône */
-    border: 2.5px dotted #000;
-    padding: 15px;
-    border-radius: 40px;
-    margin-bottom: 10px; /* Ajoutez de l'espace pour la barre de progression */
+  display: inline-block;
+  position: relative;
+  border: 2.5px dotted #000;
+  padding: 15px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+}
+
+.icon-wrapper img {
+  display: block;
+  margin: auto;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 10px;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+/* Styles pour les téléphones */
+@media screen and (max-width: 600px) {
+  .icon-wrapper {
+      padding: 10px;
+      border-radius: 20px;
+      margin-bottom: 5px;
   }
-  
-  .icon-wrapper img {
-    display: block; /* Assurez-vous que l'image ne laisse pas d'espace en dessous */
-    margin: auto; /* Centrer l'image dans le wrapper si nécessaire */
-  }
-  
+
   .progress-bar {
-    position: absolute; /* Position absolue pour placer précisément la barre de progression */
-    bottom: -20px; /* Place la barre en dessous de l'icône */
-    left: 50%;
-    transform: translateX(-50%); /* Centre la barre horizontalement par rapport au wrapper */
-    width: 50%; /* Largeur de la barre de progression, ajustez selon vos besoins */
-    height: 10px; /* Hauteur de la barre de progression */
-    background-color: #4caf50; /* Couleur de remplissage de la barre de progression */
-    border-radius: 5px; /* Coins arrondis pour la barre de progression */
+      bottom: -10px;
+      width: 70%; /* Plus large pour les petits écrans */
+      height: 8px;
   }
-  
-  /* Ajouter un ::before pseudo-element pour créer l'arrière-plan gris de la barre de progression */
-  .progress-bar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Ajustez la largeur pour représenter le maximum de la progression */
-    height: 100%;
-    background-color: #e0e0e0; /* Couleur de fond de la barre de progression */
-    z-index: -1;
-    border-radius: 5px;
+
+  /* Vous pouvez également ajuster d'autres propriétés si nécessaire */
+}
+@keyframes blob {
+  0%, 100% {
+    transform: scale(1);
   }
-  
+  50% {
+    transform: scale(1.2);
+  }
+}
+.animate-blob {
+  animation: blob 1s infinite;
+}
+.animation-delay {
+  animation-delay: 3s;
+}
